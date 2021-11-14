@@ -52,10 +52,10 @@ objects:
       name: runtime
     spec:
       tags:
-        - name: "${RUNTIME_VERSION}"
+        - name: openjdk-8-runtime:1.10-1.1634737834
           from:
             kind: DockerImage
-            name: registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:${RUNTIME_VERSION}
+            name: openjdk-8-runtime:1.10-1.1634737834
   - apiVersion: v1
     kind: BuildConfig
     metadata:

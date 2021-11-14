@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk
+FROM openjdk-8-runtime:1.10-1.1634737834
 WORKDIR /opt
 ENV PORT 8080
 EXPOSE 8080
