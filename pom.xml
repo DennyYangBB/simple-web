@@ -104,6 +104,25 @@
             <build>
                 <plugins>
                     <plugin>
+                        <groupId>com.google.cloud.tools</groupId>
+                        <artifactId>jib-maven-plugin</artifactId>
+                        <version>3.1.4</version>
+                        <configuration>
+                            <to>
+                                <image>simple-web</image>
+                            </to>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>build_image</id>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>build</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
                         <groupId>io.fabric8</groupId>
                         <artifactId>fabric8-maven-plugin</artifactId>
                         <executions>
