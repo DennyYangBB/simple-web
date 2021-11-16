@@ -32,10 +32,21 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -83,9 +94,7 @@
                             <systemPropertyVariables>
                                 <app.name>${project.artifactId}</app.name>
                             </systemPropertyVariables>
-                            <classesDirectory>
-                                ${project.build.directory}/${project.build.finalName}.${project.packaging}.original
-                            </classesDirectory>
+                            <classesDirectory>${project.build.directory}/${project.build.finalName}.${project.packaging}.original</classesDirectory>
                         </configuration>
                         <executions>
                             <execution>
@@ -99,6 +108,7 @@
                 </plugins>
             </build>
         </profile>
+
         <profile>
             <id>openshift</id>
             <build>
@@ -138,5 +148,6 @@
                 </plugins>
             </build>
         </profile>
+
     </profiles>
 </project>
