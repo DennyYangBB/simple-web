@@ -1,0 +1,5 @@
+FROM jboss-eap-7/eap73-openjdk11-openshift-rhel8
+WORKDIR /opt
+ENV PORT 8080
+EXPOSE 8080
+COPY target/SimpleWeb.jar /opt/app.jar

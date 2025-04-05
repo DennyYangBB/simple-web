@@ -1,0 +1,6 @@
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0">
+    <deployment>
+        <dependencies>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>

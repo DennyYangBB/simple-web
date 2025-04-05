@@ -1,0 +1,14 @@
+image:https://img.shields.io/badge/dynamic/json?label=issues&color=success&url=https://api.github.com/repos/DennyYangBB/simple-web&query=$.open_issues[issues]
+
+* http://127.0.0.1:8080/actuator[local actuator]
+* http://127.0.0.1:8080/actuator/prometheus[local actuator:prometheus]
+
+.tomcat - package war then deploy
+----
+mvn clean package -P tomcat
+----
+
+.jboss - package war then deploy
+----
+mvn clean package -P jboss
+----
